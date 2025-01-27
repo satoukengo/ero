@@ -1,0 +1,109 @@
+@charset "UTF-8";
+@charset "iso-8859-15"; 
+
+
+
+/* ------------------------------ */
+/* sample02 */
+/* ------------------------------ */
+
+
+.header02 {
+  padding: 16px 24px;
+  background-color: rgb(255, 240, 240);
+}
+
+.header02-logo {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+  font-family:serif ;
+}
+
+.header02-list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 24px;
+  color: black;
+  font-family:serif ;
+}
+.body {
+    background-color: rgb(255, 239, 243);
+}
+.slideshow-slide{
+    position: relative;
+    width: 280px;
+    height: 200px;
+    overflow: hidden;
+    padding: 0;
+    li{
+        list-style: none;
+        width: 100%;
+        height: 100%;
+        transition: 1s;
+        top: 0;
+        left: 0;
+        &.slide{
+          top: 0;
+          left: 100%;
+          z-index: 10;
+        }
+        &:first-of-type{
+          display: block!important;
+        }
+        img{
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
+    }
+}
+.slide {
+    position: relative;
+    overflow: hidden;
+    width: 480px;
+    height: 670px;
+    padding: 0.5rem 1.0rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    border: 1px solid #AAA;
+  }
+  
+  .slide img {
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    width: inherit;
+    height: inherit;
+    left: 100%;
+    animation: slide-anime 10s linear infinite;
+  }
+  
+  .slide img:nth-of-type(1) {animation-delay: 0s;}
+  .slide img:nth-of-type(2) {animation-delay: 5s;}
+  
+  @keyframes slide-anime {
+    0% {left: 100%;}
+    4% {left: 3%;}
+    46% {left: 3%;}
+    50% {left: -100%;}
+    100% {left: -100%;}
+  }
+  .ero{ 
+    font-size: medium;
+    font-family:serif ;
+  }
+  .erosu{ 
+    font-size: larger;
+    font-family:serif ;
+    color: #b90361;
+   }
